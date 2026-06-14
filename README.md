@@ -10,14 +10,6 @@ Prosta aplikacja iOS do nauki z plików CSV. Pozwala wczytać zestawy pytań wie
 - iOS 16+
 - Pakiet [SwiftCSV](https://github.com/swiftcsv/SwiftCSV) (dodawany przez Swift Package Manager)
 
-## Instalacja
-
-1. Utwórz nowy projekt w Xcode: **File → New → Project → App (SwiftUI)**
-2. Dodaj pakiet SwiftCSV: **File → Add Package Dependencies**
-   - URL: `https://github.com/swiftcsv/SwiftCSV`
-3. Zastąp zawartość domyślnego pliku `ContentView.swift` kodem z `QuizApp.swift` (lub wklej go jako nowy plik i usuń stary)
-4. Jeśli Xcode wygenerował osobny plik `QuizLearningApp.swift`, usuń go — punkt wejścia `@main` znajduje się już w `QuizApp.swift`
-
 ---
 
 ## Format pliku CSV
@@ -67,19 +59,3 @@ Pytanie z 3 opcjami?,Opcja A,Opcja B,Opcja C,,3
 - **Ukryj odpowiedź** – chowa zaznaczenie (ten sam przycisk)
 - Odpowiedzi oznaczone jako `brak` nie są wyświetlane
 - Obsługa pytań z wieloma poprawnymi odpowiedziami
-
----
-
-## Przygotowanie pliku CSV
-
-Jeśli plik CSV zawiera błędy formatowania (przecinki w odpowiedziach bez cudzysłowów, zawijanie wierszy), można go naprawić dołączonym skryptem Python:
-
-```bash
-python3 fix_csv.py ios.csv ios_fixed.csv
-```
-
-Skrypt:
-- scala fizycznie podzielone wiersze
-- scala fragmenty odpowiedzi rozbitych przez przecinki
-- zastępuje puste odpowiedzi tekstem `brak`
-- zapisuje poprawny plik z cudzysłowami wokół każdego pola
