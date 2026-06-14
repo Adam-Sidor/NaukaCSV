@@ -20,11 +20,11 @@ Plik musi mieć 6 kolumn rozdzielonych przecinkami:
 pytanie,odp1,odp2,odp3,odp4,poprawne
 ```
 
-| Kolumna    | Opis                                                        |
-|------------|-------------------------------------------------------------|
-| `pytanie`  | Treść pytania                                               |
-| `odp1–4`   | Cztery odpowiedzi (pusta lub `brak` jeśli opcja nie istnieje) |
-| `poprawne` | Indeks poprawnej odpowiedzi (od 1); kilka: `"1,3"`          |
+| Kolumna    | Opis                                                                    |
+|------------|-------------------------------------------------------------------------|
+| `pytanie`  | Treść pytania                                                           |
+| `odp1–4`   | Cztery odpowiedzi (`brak` jeśli opcja nie istnieje, powoduje to pominięcie pola w widoku) |
+| `poprawne` | Indeks poprawnej odpowiedzi (od 1); kilka: `"1,3"`                      |
 
 ### Przykłady
 
